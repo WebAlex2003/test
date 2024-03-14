@@ -1,0 +1,260 @@
+/**
+  |============================
+  | Basic styles
+  |============================
+*/
+
+:root {
+  --transition: 500ms;
+  --blue: #0e1823;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--blue);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+
+/* Phone version */
+
+.container {
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Tablet version  */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+/* Desctop version */
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-top: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .header {
+    padding-bottom: 40px;
+  }
+
+  .header-navigation a span {
+    color: var(--blue);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    background: #fbfbfb;
+    border-radius: 8px;
+
+    background: #fbfbfb;
+    border-radius: 8px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 50px;
+  }
+
+  .nav-item a {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--blue);
+
+    transition: var(--transition);
+  }
+
+  .nav-item a:hover,
+  .nav-item a:focus {
+    color: gold;
+    transition: var(--transition);
+  }
+
+  nav.header-navigation img {
+    margin-left: 12px;
+  }
+
+  .header-button {
+    width: 120px;
+    height: 40px;
+
+    padding: 10px 20px;
+
+    border-radius: 15px;
+    border: none;
+    background-color: var(--blue);
+
+    color: white;
+
+    transition: var(--transition);
+  }
+
+  .header-button:hover,
+  .header-button:focus {
+    background-color: gold;
+    transition: var(--transition);
+
+    color: var(--blue);
+  }
+}
+
+/**
+  |============================
+  | Hero Section
+  |============================
+*/
+
+.hero-section {
+  background-image: url(./images/pexels-tembela-bohle-1884574.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 395px 20px 234px 20px;
+}
+
+.main-information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-title {
+  font-weight: 400;
+  font-size: 64px;
+
+  color: gold;
+}
+
+.main-information p {
+  color: gold;
+}
+
+.main-button {
+  width: 280px;
+  height: 60px;
+
+  padding: 10px 20px;
+
+  border-radius: 15px;
+  border: none;
+
+  transition: var(--transition);
+}
+
+.main-button:hover,
+.main-button:focus {
+  color: white;
+  background-color: gold;
+  transition: var(--transition);
+}
+
+/**
+  |============================
+  | Third Section 
+  |============================
+*/
+
+.third-section {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.start-title {
+  font-weight: 400;
+  font-size: 48px;
+
+  color: gold;
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.third-section-text {
+  font-size: 18px;
+  color: gold;
+
+  max-width: 800px;
+
+  margin: 30px auto;
+  text-align: center;
+}
+
+.third-section-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 70px;
+}
+
+.third-section-list li p {
+  color: gold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.third-section-item img {
+  display: block;
+  margin: 0 auto;
+}
